@@ -75,26 +75,7 @@ template <class T>
 // #define ONPC
 
 void _GO() {
-  /* Solution Here..... */
-  int n;
-  int64_t t;
-  cin >> n >> t;
 
-  vector<int> vec(n);
-  for(int i = 0; i < n; i++) cin >> vec[i];
-
-  int64_t sum = 0;
-  int l = 0, ans = 0;
-
-  for(int i = 0; i < n; i++){
-      sum += vec[i];
-      while(sum > t){
-          sum -= vec[l];
-          l++;
-      }
-      ans = max(ans , i - l + 1);
-  }
-  cout << ans << endl;
 }
 
 int main(/* int argc, char *argv[] */) {
